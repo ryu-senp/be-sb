@@ -38,6 +38,12 @@ public class Main {
             System.out.println("Listado de Ciudades: ");
             ciudadRepository.findAll().forEach(System.out::println);
 
+            //Busco Ciudad por ID
+            var cityId = ciudadRepository.findById(1).orElse(null);
+            System.out.println("Ciudad con ID 1: " + cityId);
+
+
+
             //Obtener todas las Comunas
             System.out.println("Listado de Comunas:");
             comunaRepository.findAll().forEach(System.out::println);

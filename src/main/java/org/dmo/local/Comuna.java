@@ -19,15 +19,8 @@ public class Comuna {
     public void setNombre(String nombre) {this.nombre = nombre;}
 
     @Override
-    public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        Comuna comunas = (Comuna) o;
-        return Objects.equals(id, comunas.id) && Objects.equals(nombre, comunas.nombre) ;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, nombre);
+    public String toString() {
+        return "Comuna{" + "id=" + id + ", nombre=" + nombre + '}';
     }
 
 

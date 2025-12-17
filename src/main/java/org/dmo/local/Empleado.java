@@ -53,14 +53,19 @@ public class Empleado {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        Empleado empleado = (Empleado) o;
-        return Objects.equals(id, empleado.id) && Objects.equals(nombre, empleado.nombre) && Objects.equals(apellido, empleado.apellido) && Objects.equals(rut, empleado.rut);
+    public String toString(){
+        return "Empleado{"  + "id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + '}';
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, nombre, apellido, rut);
-    }
+//    @Override
+//    public boolean equals(Object o) {
+//        if (o == null || getClass() != o.getClass()) return false;
+//        Empleado empleado = (Empleado) o;
+//        return Objects.equals(id, empleado.id) && Objects.equals(nombre, empleado.nombre) && Objects.equals(apellido, empleado.apellido) && Objects.equals(rut, empleado.rut);
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(id, nombre, apellido, rut);
+//    }
 }

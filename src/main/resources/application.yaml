@@ -9,7 +9,17 @@ spring:
   jpa: ##java persistent api por que a la bd se les dice coloquialmeente "CAPA DE PERSISTENCIA"
     hibernate:
       ddl-auto: none
-    show-sql: true
+    show-sql: false
     properties:
       hibernate:
-        format_sql: true
+        format_sql: false
+
+
+  logging:
+    level:
+      org:
+        hibernate:
+          SQL: OFF
+          type:
+            descriptor:
+              sql: OFF

@@ -19,16 +19,22 @@ public class Ciudad {
     public String getNombre() {return nombre;}
     public void setNombre(String nombre) {this.nombre = nombre;}
 
-    @Override
-    public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        Ciudad ciudades = (Ciudad) o;
-        return Objects.equals(idciudades, ciudades.idciudades) && Objects.equals(nombre, ciudades.nombre) ;
-    }
 
     @Override
-    public int hashCode() {
-        return Objects.hash(idciudades, nombre);
+    public String toString(){
+        return "Ciudad{" + "idciudades=" + idciudades + ", nombre=" + nombre + '}';
     }
-
 }
+
+//    @Override
+//    public boolean equals(Object o) {
+//        if (o == null || getClass() != o.getClass()) return false;
+//        Ciudad ciudades = (Ciudad) o;
+//        return Objects.equals(idciudades, ciudades.idciudades) && Objects.equals(nombre, ciudades.nombre) ;
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(idciudades, nombre);
+//    }
+
