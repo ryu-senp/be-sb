@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/empleados?useSSL=false&serverTimezone=UTC
+    username: root
+    password: Arisnel22.
+
+      ##java data base conector -> BASE DE DATOS
+
+  jpa: ##java persistent api por que a la bd se les dice coloquialmeente "CAPA DE PERSISTENCIA"
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
