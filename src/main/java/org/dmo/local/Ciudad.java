@@ -8,9 +8,12 @@ public class Ciudad {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
+    @Column(name = "idciudades")
     private Integer idciudades;
+    @Column(name = "nombre", nullable = false, unique = true)
     private String nombre;
+
+
 
     //Getters and Setters
     public Integer getIdciudades() {return idciudades;}
@@ -26,15 +29,5 @@ public class Ciudad {
     }
 }
 
-//    @Override
-//    public boolean equals(Object o) {
-//        if (o == null || getClass() != o.getClass()) return false;
-//        Ciudad ciudades = (Ciudad) o;
-//        return Objects.equals(idciudades, ciudades.idciudades) && Objects.equals(nombre, ciudades.nombre) ;
-//    }
-//
-//    @Override
-//    public int hashCode() {
-//        return Objects.hash(idciudades, nombre);
-//    }
+
 

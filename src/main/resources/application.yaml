@@ -8,10 +8,11 @@ spring:
 
   jpa: ##java persistent api por que a la bd se les dice coloquialmeente "CAPA DE PERSISTENCIA"
     hibernate:
-      ddl-auto: none
+      ddl-auto: update # create read update delete
     show-sql: false
     properties:
       hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
         format_sql: false
 
 
