@@ -18,49 +18,33 @@ public class Main {
                                   ComunaRepository comunaRepository) {
         return args -> {
 
-            // Obtener todos los empleados
-            System.out.println("Listado de empleados:");
-            empleadoRepository.findAll().forEach(System.out::println);
+            // Buscar o crear Ciudad primero
+            String nombreCiudad = "quintero";
+            Ciudad ciudad;
 
-            // Buscar por ID
-            var emp = empleadoRepository.findById(1).orElse(null);
-            System.out.println("Empleado con ID 1: " + emp);
-
-            // Insertar uno nuevo
-//            Empleado nuevo = new Empleado();
-//            nuevo.setNombre("Juan");
-//            nuevo.setApellido("Pérez");
-//            nuevo.setRut("11.111.111-1");
-//            empleadoRepository.save(nuevo);
-
-
-            // Inserta nueva ciudad
-            String nombreCiudad = "paquistan";
-            String nombreNormalizado = nombreCiudad.trim();
-
-            if (ciudadRepository.existsByNombreIgnoreCase(nombreNormalizado)) {
-                System.out.println("La ciudad '" + nombreNormalizado + "' ya existe en los registros");
-                // O lanzar excepción: throw new RuntimeException("Ciudad duplicada");
+            if (ciudadRepository.existsByNombreIgnoreCase(nombreCiudad)) {
+                // Buscar la ciudad existente
+                ciudad = ciudadRepository.findByNombreIgnoreCase(nombreCiudad)
+                        .orElseThrow(() -> new RuntimeException("Ciudad no encontrada"));
+                System.out.println("Usando ciudad existente: " + ciudad.getNombre());
             } else {
-                Ciudad city = new Ciudad();
-                city.setNombre(nombreNormalizado);
-                ciudadRepository.save(city);
-                System.out.println("Ciudad creada exitosamente");
+                // Crear nueva ciudad
+                ciudad = new Ciudad();
+                ciudad.setNombre(nombreCiudad);
+                ciudadRepository.save(ciudad);
+                System.out.println("Ciudad creada: " + ciudad.getNombre());
             }
 
-            //Obtener todas las Ciudades
-            System.out.println("Listado de Ciudades: ");
-            ciudadRepository.findAll().forEach(System.out::println);
-
-//            //Busco Ciudad por ID
-//            var cityId = ciudadRepository.findById(1).orElse(null);
-//            System.out.println("Ciudad con ID 1: " + cityId);
-
-            //Obtener todas las Comunas
-            System.out.println("Listado de Comunas:");
-            comunaRepository.findAll().forEach(System.out::println);
-
-            System.out.println("Empleado insertado correctamente");
+            String nameComNorm = "cueva edionda";
+            // Luego crear Comuna con la Ciudad
+            if (comunaRepository.existsByNombreIgnoreCase(nameComNorm)) {
+                System.out.println("La comuna '" + nameComNorm + "' ya existe en los registros");
+            } else {
+                Comuna comuna = new Comuna();
+                comuna.setNombre(nameComNorm);
+                comunaRepository.save(comuna);
+                System.out.println("Comuna "+comuna.getNombre()+ " creada exitosamente y asignada a: " + ciudad.getNombre());
+            }
         };
     }
 }

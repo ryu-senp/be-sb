@@ -9,6 +9,8 @@ public class Ciudad {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idciudades")
+
+
     private Integer idciudades;
     @Column(name = "nombre", nullable = false, unique = true)
     private String nombre;
