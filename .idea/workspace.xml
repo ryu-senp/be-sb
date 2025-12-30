@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2e57736-e89b-405e-8808-a4089e907b2d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/dmo/local/EstudiosRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/dmo/local/estudios.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dmo/local/Ciudad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dmo/local/Ciudad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dmo/local/CiudadRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dmo/local/CiudadRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dmo/local/Comuna.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dmo/local/Comuna.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/dmo/local/ComunaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dmo/local/ComunaRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/dmo/local/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/dmo/local/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +19,14 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -91,6 +95,11 @@
       <workItem from="1766505804601" duration="8289000" />
       <workItem from="1766515084908" duration="797000" />
       <workItem from="1766515902601" duration="333000" />
+      <workItem from="1766516253601" duration="2321000" />
+      <workItem from="1766641142938" duration="54000" />
+      <workItem from="1766700224821" duration="3850000" />
+      <workItem from="1767130322335" duration="16000" />
+      <workItem from="1767130461628" duration="199000" />
     </task>
     <servers />
   </component>
