@@ -13,9 +13,10 @@ public class Main {
     }
 
     @Bean
-    public CommandLineRunner demo(EmpleadoRepository empleadoRepository,
+    public CommandLineRunner ejecutarConsulta(EmpleadoRepository empleadoRepository,
                                   CiudadRepository ciudadRepository,
-                                  ComunaRepository comunaRepository) {
+                                  ComunaRepository comunaRepository,
+                                  EstudiosRepository estudiosRepository) {
         return args -> {
 
             // Buscar o crear Ciudad primero
@@ -45,6 +46,18 @@ public class Main {
 //                comunaRepository.save(comuna);
 //                System.out.println("Comuna "+comuna.getNombre()+ " creada exitosamente y asignada a: " + ciudad.getNombre());
 //            }
+
+            //aqui consulto la tabla (Entidad empleados)
+            estudiosRepository.findAll().forEach(estudio -> {
+                System.out.println("ID: "+estudio.getId());
+                System.out.println("Nombre: " + estudio.getNombre());
+                System.out.println("Título: " + estudio.getTitulo());
+                System.out.println("Inicio: " + estudio.getFechaInicio());
+                System.out.println("Término: " + estudio.getFechaTermino());
+                System.out.println("Descripción: " + estudio.getDescripcion());
+                System.out.println("-----------------------------");
+            });
+
         };
     }
 }
