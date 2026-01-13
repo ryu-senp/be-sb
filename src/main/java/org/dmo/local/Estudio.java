@@ -5,7 +5,7 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name = "estudios")
-public class estudios {
+public class Estudio {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -25,16 +25,16 @@ public class estudios {
     public void setId(Integer id) { this.id = id; }
 
     public String getNombre() {return nombre;}
-    public void setNombre(){this.nombre = nombre;}
+    public void setNombre(String nombre){this.nombre = nombre;}
 
     public String getTitulo() {return titulo;}
-    public void setTitulo() {this.titulo = titulo;}
+    public void setTitulo(String titulo) {this.titulo = titulo;}
 
     public LocalDate getFechaInicio() {return fechaInicio;}
-    public void setFechaInicio() {this.fechaInicio = fechaInicio;}
+    public void setFechaInicio(LocalDate fechaInicio) {this.fechaInicio = fechaInicio;}
 
     public LocalDate getFechaTermino() {return fechaTermino;}
-    public void setFechaTermino() {this.fechaTermino = fechaTermino;}
+    public void setFechaTermino(LocalDate fechaTermino) {this.fechaTermino = fechaTermino;}
 
     public String getDescripcion() {return descripcion;}
     public void setDescripcion(String descripcion) {this.descripcion = descripcion;}
