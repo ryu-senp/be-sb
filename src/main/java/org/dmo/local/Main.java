@@ -74,7 +74,16 @@ public class Main {
 
                 System.out.println("📌 Estudios creados correctamente.");
             }
-
+//         MOSTRAR SIEMPRE
+            estudiosRepository.findAll().forEach(estudio -> {
+                System.out.println("ID: " + estudio.getId());
+                System.out.println("Nombre: " + estudio.getNombre());
+                System.out.println("Título: " + estudio.getTitulo());
+                System.out.println("Inicio: " + estudio.getFechaInicio());
+                System.out.println("Término: " + estudio.getFechaTermino());
+                System.out.println("Descripción: " + estudio.getDescripcion());
+                System.out.println("-----------------------------");
+            });
 
         };
     }

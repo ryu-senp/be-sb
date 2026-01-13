@@ -39,7 +39,7 @@ public class DataInitializer implements CommandLineRunner {
             System.out.println("📌 Estudios creados correctamente.");
         }
 
-        // MOSTRAR SIEMPRE
+//         MOSTRAR SIEMPRE
         estudiosRepository.findAll().forEach(estudio -> {
             System.out.println("ID: " + estudio.getId());
             System.out.println("Nombre: " + estudio.getNombre());
